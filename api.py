@@ -10,18 +10,17 @@ res = requests.get('https://api.weather.gov/stations', params=params)
 
 data = res.json()
 
-"""def jprint(data):
+def jprint(data):
     text = json.dumps(data, sort_keys = True, indent = 4)
     print(text)
 
-jprint(res.json())"""
+jprint(res.json())
 
 dict = {}
 
 for i in range(len(data['features'])):
-    dict['coords'] = data['features'][i]['geometry']['coordinates']
-    dict['place'] = data['features'][i]['properties']['name']
-    print( data['features'][i]['geometry']['coordinates'])
-    
-df = pd.DataFrame().from_dict(dict)
-print(df)
+    dict[i] = data['features'][i]['geometry']['coordinates']
+print (dict) 
+
+"""df = pd.DataFrame().from_dict(dict)
+print(df)"""
