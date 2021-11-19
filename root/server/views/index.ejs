@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <%- include('header'); -%>
+    <body>
+        <div class="center">
+            <h1>SignUp</h1>
+            <form id="signForm" action="user/signup" method="POST">
+                <div class="txt_field">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="email" required>
+                    <label>email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="password" required>
+                    <label>Password</label>
+                </div>
+                <input type="submit" id="signup" value="signup">
+            </form>
+        </div>
+        <div class="center">
+            <h1>LogIn</h1>
+            <form id="loginForm" action="user/login" method="POST">
+                <div class="txt_field">
+                    <input type="text" name="email" required>
+                    <label>email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="password" required>
+                    <label>Password</label>
+                </div>
+                <input type="submit" id="login" value="login">
+            </form>
+        </div>
+    </body>
+    <%- include('footer'); -%>
+</html>
