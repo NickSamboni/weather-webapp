@@ -16,7 +16,7 @@
 
     <!-- Header Start -->
     <header>
-      <div id="home" class="container">
+      <div id="login" class="container">
         <div class="row">
           <div class="col-md-12">
             <!-- header Nav Start -->
@@ -37,11 +37,11 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#home" >Home</a></li>
+                      <li><a href="./home.ejs">Home</a></li>
                       <li><a >Work</a></li>
                       <li><a >Temperature Map</a></li>
                       <li><a >Wind Map</a></li>
-                      <li><a href="./signup.ejs">Sing In</a></li>
+                      <li><a href="#login">Sing In</a></li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -52,18 +52,38 @@
     </header><!-- header close -->
         
     <!-- Slider Start -->
-    <section id="slider">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-2">
-            <div class="block">
-              <h1 class="animated fadeInUp">A DIGITAL MARKETING &#38; <br> DESIGN AGENCY</h1>
-              <p class="animated fadeInUp">We love the Web and the work we do.We work closely with our </br> clients to deliver the best possible solutions for their needs</p>
+    <div class="center">
+        <h1>SignUp</h1>
+        <form id="signForm" action="user/signup" method="POST">
+            <div class="txt_field">
+                <input type="text" name="username" required>
+                <label>Username</label>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="txt_field">
+                <input type="text" name="email" required>
+                <label>email</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="password" required>
+                <label>Password</label>
+            </div>
+            <input type="submit" id="signup" value="signup">
+        </form>
+    </div>
+    <div class="center">
+        <h1>LogIn</h1>
+        <form id="loginForm" action="user/login" method="POST">
+            <div class="txt_field">
+                <input type="text" name="email" required>
+                <label>email</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="password" required>
+                <label>Password</label>
+            </div>
+            <input type="submit" id="login" value="login">
+        </form>
+    </div>
 
     <!-- footer Start -->
     <footer>
