@@ -7,51 +7,22 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type ="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type ="text/css" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" type ="text/css" href="/css/style.css">
-    <link rel="stylesheet" type ="text/css" href="/css/animate.css">
+    <link rel="stylesheet" type ="text/css" href="/css/stylelogin.css">
   </head>
   <body>
-
-    <!-- Header Start -->
-    <header>
-      <div id="login" class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <!-- header Nav Start -->
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="index.html">
-                    <img src="../img/logo.png" alt="Logo">
-                  </a>
-                </div>
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                      <li><a href="./home.ejs">Home</a></li>
-                      <li><a >Work</a></li>
-                      <li><a >Temperature Map</a></li>
-                      <li><a >Wind Map</a></li>
-                      <li><a href="#login">Sing In</a></li>
-                    </ul>
-                  </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-              </nav>
-            </div>
-          </div>
-      </div>
-    </header><!-- header close -->
-        
-    <!-- Slider Start -->
+    <div class="header">
+      <img class="logo" src="img/logo.png" alt="Logo">
+      <nav>
+        <ul class="nav__links">
+          <li><a href="./home.ejs">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Temperature Map</a></li>
+          <li><a href="#">Wind Map</a></li>
+          <li><a href="#">Sing In</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Slider Start
     <div class="center">
         <h1>SignUp</h1>
         <form id="signForm" action="user/signup" method="POST">
@@ -69,42 +40,28 @@
             </div>
             <input type="submit" id="signup" value="signup">
         </form>
-    </div>
-    <div class="center">
-        <h1>LogIn</h1>
+    </div> -->
+    <div class="body">
+    <div class="contenedor">
+        <p class="heading">Login In</p>
         <form id="loginForm" action="user/login" method="POST">
-            <div class="txt_field">
-                <input type="text" name="email" required>
-                <label>email</label>
+          <div class="box">
+            <p>Email</p>
+            <div>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+              </div>
             </div>
-            <div class="txt_field">
-                <input type="text" name="password" required>
-                <label>Password</label>
+          <div class="box">
+            <p>Password</p>
+            <div>
+                <input type="text" name="password" placeholder="Enter Your Password" required>
             </div>
-            <input type="submit" id="login" value="login">
+          </div>
+            <input type="submit" id="login" value="login" class="loginBtn">
         </form>
     </div>
+  </div>
 
-    <!-- footer Start -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-manu">
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Terms</a></li>
-              </ul>
-            </div>
-            <p>Copyright &copy;</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
-    </body>
+
+</body>
 </html>
