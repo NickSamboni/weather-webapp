@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const user = require("./routes/user");
-const home = require("./routes/index");
+const home = require("./routes/home");
+
 var path = require('path');
 
 const InitiateMongoServer = require("./config/db");
@@ -10,6 +11,10 @@ const InitiateMongoServer = require("./config/db");
 InitiateMongoServer();
 
 const app = express();
+
+//Constructor for the css files to work
+app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 //view engine setup
 app.set('views', path.join(__dirname, 'views'));
