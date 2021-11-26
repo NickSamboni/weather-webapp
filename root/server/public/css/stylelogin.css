@@ -20,7 +20,7 @@ li, a, button {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color:whitesmoke;
+    background-color:white;
 }
 
 .body{
@@ -59,7 +59,7 @@ li, a, button {
 }
 
 .contenedor{
-    background: rgb(15, 15, 15);
+    background: rgb(0, 0, 0);
     width: 350px;
     height: 450px;
     border-radius: 20px;
@@ -104,7 +104,7 @@ li, a, button {
     width: 102%;
     height: 105%;
     border-radius: 10px;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #fcfcfc, #ff4b2b);
 }
 
 .loginBtn{
@@ -116,7 +116,7 @@ li, a, button {
     transform: translate(-1%);
     cursor: pointer;
     color: white;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #ffffff, #ff4b2b);
     transition: all .4s;
 }
 
