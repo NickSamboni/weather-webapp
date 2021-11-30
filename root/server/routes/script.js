@@ -14,22 +14,22 @@ const { document } = (new JSDOM('')).window;
 global.document = document;
 var $ = jQuery = require('jquery')(window);
 
-const BaseURL = 'http://api.weather.gov/stations/SURF1'
+const BaseURL = 'http://api.weather.gov/stations/SURF1/observations/latest'
 //const stationid = 'SURF1'
-const queryURL = `${BaseURL}/observations/latest`
+//const queryURL = `${BaseURL}/observations/latest`
 
 class requestController {
     //manager of the forbidden access to the API - CORS
-    addCorsHeader(){ 
+    /*addCorsHeader(){ 
         $.ajaxPrefilter(options => {
             if(options.crossDomain && $.support.cors) {
                 options.url = 'https://the-ultimate-api-challenge.herokuapp.com/' + options.url;
             }
         });
-    }
+    }*/
     getLocation() {
-        this.addCorsHeader()
-        $.getJSON(queryURL).done(data => console.log(data))
+        //this.addCorsHeader()
+        $.getJSON(BaseURL).done(data => console.log(data))
     }
 }
 
