@@ -21,6 +21,10 @@ app.use(express.json());
 
 app.use('/user', user);
 
+app.get("/", (req, res) => {
+  res.json({ message: "Server Working" });
+});
+
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at PORT ${PORT}`);
 });

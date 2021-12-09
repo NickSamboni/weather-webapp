@@ -1,56 +1,27 @@
-import { useState } from 'react';
-import React from 'react';
+import React from "react"
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import Login from './components/pages/Login'
+import Signup from './components/pages/Signup'
+import Home from './components/pages/Home'
+
+import Navbar from "./components/Navbar"
 import './App.css';
 
-function App() {
-  const [username, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  async function registerUser(event) {
-    event.preventDefault()
-    const response = await fetch('http://localhost:4000/user/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username,
-        email,
-        password,
-      }),
-    })
-    await response.json()
-  }
-  return (
-    <div>
-      <h1> login </h1>
-      <form onSubmit={registerUser}>
-        <input
-          value={username}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="User"
-        />
-      <br />
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="email"
-        placeholder="Email"
-      />
-      <br />
-      <input
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        type="password"
-        placeholder="password"
-      />
-      <br />
-      <input type="submit" value="Register"></input>
-    </form>
-    </div>
-  );
+function App () {
+  
+  return ( 
+  <BrowserRouter>
+   <Navbar />
+    <Routes>
+      <Route path='/home' exact element={<Home />} />
+      <Route path='/login' exact element={<Login />} />
+      <Route path="/signup" exact element={<Signup />} />
+    </Routes>
+  </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
+
+
+
