@@ -17,6 +17,10 @@ router.get('/signup.ejs', function(req, res) {
   res.render('signup'); // view name to be displayed
 });
 
+router.get('/home.ejs', function(req, res) { 
+  res.render('home'); // view name to be displayed
+});
+
 
 
 

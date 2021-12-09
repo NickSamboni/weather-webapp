@@ -2,10 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const user = require("./routes/user");
 const home = require("./routes/home");
+const apidata = require("./routes/script");
 
 var path = require('path');
 
 const InitiateMongoServer = require("./config/db");
+const { Script } = require("vm");
 
 //init the MONGODB connection
 InitiateMongoServer();
@@ -29,6 +31,7 @@ app.use(express.json());
 
 app.use('/', home);
 app.use('/user', user);
+app.use('/apidata', apidata);
 
 
 /* app.get("/", (req, res) => {
