@@ -38,6 +38,7 @@ function Navbar() {
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}> 
             <li className='nav-item'> <Link to='/Home' className='nav-links' onClick={MenuOff}> Home </Link> </li>
+            <li className='nav-item'> <Link to='/Maps' className='nav-links' onClick={MenuOff}> Maps </Link></li>
             <li className='nav-item'> <Link to='/Login' className='nav-links' onClick={MenuOff}> Login </Link> </li>
             <li>                      <Link to='/Signup' className='nav-links-mobile' onClick={MenuOff}> Sign Up </Link> </li>
           </ul>
