@@ -31,7 +31,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/Home' className='navbar-logo' onClick={MenuOff}> Nuestra web bro <img src='images/inspector.jpeg' alt='logo' width='50px'/> </Link>
+          <Link to='/Home' className='navbar-logo' onClick={MenuOff}><img src='images/Logo24-01.png' alt='logo' width='50px'/> UStations </Link>
           <div className='menu-icon' onClick={ClickAction}> 
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
