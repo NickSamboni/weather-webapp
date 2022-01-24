@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import React from 'react';
+import './login.css'
 
-function App() {
+export default function App() {
   const [username, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,34 +23,44 @@ function App() {
     await response.json()
   }
   return (
-    <div>
-      <h1> Signup </h1>
+    <div className="login-box">
+      <h2> Signup </h2>
       <form onSubmit={registerUser}>
-        <input
-          value={username}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="User"
-        />
-      <br />
-      <input
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="email"
-        placeholder="Email"
-      />
-      <br />
-      <input
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        type="password"
-        placeholder="password"
-      />
-      <br />
-      <input type="submit" value="Register"></input>
-    </form>
+        <div className="user-box">
+          <input
+            value={username}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+          />
+          <label>Username</label>
+          <br />
+        </div>
+        <div className="user-box">
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+          />
+          <label>Email</label>
+          <br />
+        </div>
+        <div class="user-box">
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+          />
+          <label>Password</label>
+          <br />
+        </div>
+        <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+      </form>
     </div>
   );
 }
-
-export default App

@@ -6,8 +6,7 @@
 
 const mongoose = require("mongoose");
 
-//const MONGOURI = "mongodb://127.0.0.1:27017/weather_app_testing";
-const MONGOURI = "mongodb+srv://masterpiece:fuckitshit@cluster0.v6lvd.mongodb.net/test";
+const MONGOURI = "mongodb://127.0.0.1:27017/weather_app_testing";
 
 const InitiateMongoServer = async () => { //usage of async func in order to be sure the db is ready to work. async goes with await
   try {

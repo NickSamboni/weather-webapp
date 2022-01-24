@@ -1,12 +1,14 @@
 import React from 'react';
+import HeroSection from '../components/HeroSection';
+import Footer from '../components/Footer';
 
-function App(){
+export default function App() {
 
-    return (
-    
-      <div>App api</div>
-       
-    )
+  return (
+<>
+      
+      <HeroSection />
+      <Footer />
+      </>
+  )
 }
-
-export default App
