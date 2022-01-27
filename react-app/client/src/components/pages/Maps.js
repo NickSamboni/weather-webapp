@@ -45,7 +45,8 @@ export default function App(){
           ]
       }
   }));
-
+  console.log(stat)
+  
   const bounds = mapRef.current ? mapRef.current.getMap().getBounds().toArray().flat() : null;
 
   const {clusters} = useSuperCluster({
@@ -54,7 +55,7 @@ export default function App(){
       zoom: viewport.zoom,
       options: { radius:75, maxZoom: 20}
   });
-
+  console.log(clusters)
   return (
     <div className='conjunto'>
     <div className='container-1'>  
